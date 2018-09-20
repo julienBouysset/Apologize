@@ -1,0 +1,10 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ ssr | raw }}
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('build/entry-client.js') }}"></script>
+{% endblock %}

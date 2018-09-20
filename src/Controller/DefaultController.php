@@ -14,7 +14,7 @@ class DefaultController  extends Controller
     public function number()
     {
         $ssr = $this->renderJs();
-        return $this->render('base.html.twig', ['ssr' => $ssr]);
+        return $this->render('app.html.twig', ['ssr' => $ssr]);
     }
 
 
