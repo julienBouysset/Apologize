@@ -12,3 +12,12 @@ require('../css/app.css');
 // var $ = require('jquery');
 
 console.log('Hello Webpack Encore! Edit me in assets/js/app.js');
+
+import App from './components/App.vue';
+import Vue from 'vue';
+
+export function createApp() {
+    return new Vue({
+        render: h => h(App)
+    });
+}
