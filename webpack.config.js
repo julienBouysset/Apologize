@@ -19,7 +19,7 @@ Encore
      * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
      */
 
-    .addEntry('entry-client', './assets/js/entry-client.js')
+    .addEntry('client', './assets/js/client.js')
     .addEntry('entry-server', './assets/js/entry-server.js')
     //.addEntry('app', './assets/js/app.js')
     //.addEntry('page1', './assets/js/page1.js')
