@@ -24,8 +24,20 @@ services:
     # controllers are imported separately to make sure services can be injected
     # as action arguments even if you don't extend any base controller class
     App\Controller\:
-        resource: '../src/Controller'
+        resource: '../src/Controller/'
         tags: ['controller.service_arguments']
+
+    App\Controller\Home\:
+        resource: '../src/Controller/Home/'
+        tags: ['controller.service_arguments']
+
+    App\Twig\VueExtension:
+        arguments: ["@render.js"]
+        tags: ['twig.extension']
+
+    render.js:
+        alias: App\Service\RenderJS
+        public: true
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

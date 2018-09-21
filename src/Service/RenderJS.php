@@ -1,24 +1,10 @@
 <?php
+namespace App\Service;
 
-namespace App\Controller;
-
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
-class DefaultController  extends Controller
+class RenderJS
 {
-    /**
-     * @Route("/")
-     */
-    public function number()
-    {
-        $ssr = $this->renderJs();
-        return $this->render('app.html.twig', ['ssr' => $ssr]);
-    }
 
-
-    private function renderJs()
+    public function renderJS()
     {
         $renderer_source = file_get_contents(__DIR__ . '/../../node_modules/vue-server-renderer/basic.js');
         $app_source = file_get_contents(__DIR__ . '/../../public/build/entry-server.js');
