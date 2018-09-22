@@ -1,4 +1,4 @@
-import { createApp } from './app'
+import { createApp } from './render-counter'
 renderVueComponentToString(createApp(), (err, res) => {
     print(res);
 });

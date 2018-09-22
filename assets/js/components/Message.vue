@@ -1,7 +1,5 @@
 <template>
-    <div id="app">
-        {{ message }}
-    </div>
+    <p>{{ message }}</p>
 </template>
 <script>
     export default {

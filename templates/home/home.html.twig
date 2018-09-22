@@ -1,9 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {{ vueTest() | raw }}
-{% endblock %}
-
-{% block javascripts %}
-    <script src="{{ asset('build/client.js') }}"></script>
+    <div id="app">
+        <message>
+            {{ vueMessage() | raw }}
+        </message>
+        <Counter>
+            {{ vueCounter() | raw }}
+        </Counter>
+    </div>
 {% endblock %}

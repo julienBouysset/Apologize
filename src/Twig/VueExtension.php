@@ -18,12 +18,18 @@ class VueExtension extends AbstractExtension
     public function getFunctions()
     {
         return array(
-            new TwigFunction('vueTest', array($this, 'vueTestFilter')),
+            new TwigFunction('vueMessage', array($this, 'vueMessageFunction')),
+            new TwigFunction('vueCounter', array($this, 'vueCounterFunction')),
         );
     }
 
-    public function vueTestFilter()
+    public function vueMessageFunction()
     {
-        return $this->renderJS->renderJS();
+        return $this->renderJS->renderJS("message");
+    }
+
+    public function vueCounterFunction()
+    {
+        return $this->renderJS->renderJS("counter");
     }
 }
