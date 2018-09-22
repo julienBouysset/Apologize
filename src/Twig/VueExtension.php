@@ -25,11 +25,13 @@ class VueExtension extends AbstractExtension
 
     public function vueMessageFunction()
     {
-        return $this->renderJS->renderJS("message");
+        $componsentName = "message";
+        return '<'. $componsentName . '>' . $this->renderJS->renderJS($componsentName) . '</'. $componsentName . '>';
     }
 
     public function vueCounterFunction()
     {
-        return $this->renderJS->renderJS("counter");
+        $componsentName = "counter";
+        return '<'. $componsentName . '>' . $this->renderJS->renderJS($componsentName) . '</'. $componsentName . '>';
     }
 }

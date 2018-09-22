@@ -2,11 +2,7 @@
 
 {% block body %}
     <div id="app">
-        <message>
-            {{ vueMessage() | raw }}
-        </message>
-        <Counter>
-            {{ vueCounter() | raw }}
-        </Counter>
+        {{ vueMessage() | raw }}
+        {{ vueCounter() | raw }}
     </div>
 {% endblock %}
