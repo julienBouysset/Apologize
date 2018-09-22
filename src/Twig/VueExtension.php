@@ -20,6 +20,7 @@ class VueExtension extends AbstractExtension
         return array(
             new TwigFunction('vueMessage', array($this, 'vueMessageFunction')),
             new TwigFunction('vueCounter', array($this, 'vueCounterFunction')),
+            new TwigFunction('vueLogo',    array($this, 'vueLogoFunction')),
         );
     }
 
@@ -34,4 +35,14 @@ class VueExtension extends AbstractExtension
         $componsentName = "counter";
         return '<'. $componsentName . '>' . $this->renderJS->renderJS($componsentName) . '</'. $componsentName . '>';
     }
+
+    public function vueLogoFunction($subsitesName = "home")
+    {
+        $componsentName = "logo";
+        return null;
+        return '<'. $componsentName . '>' . $this->renderJS->renderJS($componsentName, $subsitesName) . '</'. $componsentName . '>';
+        //todo modifier renderjs pour prendre argument crée composant
+    }
+
+
 }

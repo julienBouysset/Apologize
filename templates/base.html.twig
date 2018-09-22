@@ -2,11 +2,16 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Apologize{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div id="app">
+            {% set subsitesName = app.request.attributes.get("_route")|split('_')|first %}
+            <head>{{ vueLogo(subsitesName) | raw }}</head>
+            {% block body %}{% endblock %}
+        </div>
+
         {% block javascripts %}
             <script src="{{ asset('build/client-' ~ app.request.attributes.get("_route") ~ '.js') }}"></script>
         {% endblock %}

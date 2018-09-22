@@ -31,6 +31,11 @@ services:
         resource: '../src/Controller/Home/'
         tags: ['controller.service_arguments']
 
+    App\Controller\Gaming\:
+        resource: '../src/Controller/Gaming/'
+        tags: ['controller.service_arguments']
+
+
     App\Twig\VueExtension:
         arguments: ["@render.js"]
         tags: ['twig.extension']
