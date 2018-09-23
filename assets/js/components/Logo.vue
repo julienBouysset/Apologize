@@ -11,3 +11,9 @@
         }
     }
 </script>
+<style lang="stylus" scoped>
+    p
+        font-size 2em
+        color #AA3333
+        text-align center
+</style>

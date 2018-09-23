@@ -3,7 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Apologize{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('build/client-' ~ app.request.attributes.get("_route") ~ '.css') }}">
+        {% endblock %}
     </head>
     <body>
         <div id="app">
