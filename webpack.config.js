@@ -19,9 +19,11 @@ Encore
      * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
      */
 
-    .addEntry('client-home_home', './assets/js/client-home_home.js')
+    .addEntry('client-home_home',   './assets/js/client-home_home.js')
+    .addEntry('client-gaming_home', './assets/js/client-gaming_home.js')
 
     .addEntry('server-message', './assets/js/server-message.js')
+    .addEntry('server-logo',    './assets/js/server-logo.js')
     .addEntry('server-counter', './assets/js/server-counter.js')
     //.addEntry('app', './assets/js/app.js')
     //.addEntry('page1', './assets/js/page1.js')

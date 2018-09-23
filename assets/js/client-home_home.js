@@ -1,3 +1,4 @@
+import Logo    from './components/Logo.vue';
 import Message from './components/Message.vue';
 import Counter from './components/Counter.vue';
 
@@ -7,7 +8,8 @@ function createApp() {
     return new Vue({
         components: {
             Counter,
-            Message
+            Message,
+            Logo
         },
     });
 }

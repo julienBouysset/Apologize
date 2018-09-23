@@ -8,7 +8,7 @@
     <body>
         <div id="app">
             {% set subsitesName = app.request.attributes.get("_route")|split('_')|first %}
-            <head>{{ vueLogo(subsitesName) | raw }}</head>
+            <header>{{ vueLogo(subsitesName) | raw }}</header>
             {% block body %}{% endblock %}
         </div>
 

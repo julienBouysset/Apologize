@@ -10,11 +10,18 @@ class VueExtension extends AbstractExtension
 {
     private $renderJS;
 
+    /**
+     * VueExtension constructor.
+     * @param RenderJS $renderJS
+     */
     public function __construct(RenderJS $renderJS)
     {
         $this->renderJS = $renderJS;
     }
 
+    /**
+     * @return array|\Twig_Function[]
+     */
     public function getFunctions()
     {
         return array(
@@ -24,24 +31,32 @@ class VueExtension extends AbstractExtension
         );
     }
 
+    /**
+     * @return string
+     */
     public function vueMessageFunction()
     {
         $componsentName = "message";
         return '<'. $componsentName . '>' . $this->renderJS->renderJS($componsentName) . '</'. $componsentName . '>';
     }
 
+    /**
+     * @return string
+     */
     public function vueCounterFunction()
     {
         $componsentName = "counter";
         return '<'. $componsentName . '>' . $this->renderJS->renderJS($componsentName) . '</'. $componsentName . '>';
     }
 
-    public function vueLogoFunction($subsitesName = "home")
+    /**
+     * @param string $subsitesName
+     * @return string
+     */
+    public function vueLogoFunction(string $subsitesName = "home")
     {
         $componsentName = "logo";
-        return null;
-        return '<'. $componsentName . '>' . $this->renderJS->renderJS($componsentName, $subsitesName) . '</'. $componsentName . '>';
-        //todo modifier renderjs pour prendre argument crée composant
+        return '<'. $componsentName . ' message="' . $subsitesName . '">' . $this->renderJS->renderJS($componsentName, $subsitesName) . '</'. $componsentName . '>';
     }
 
 
