@@ -1,15 +1,17 @@
 import Logo from './components/Logo.vue';
 import Vue from 'vue';
 
-
-
 function createApp() {
     return new Vue({
-        message: message,
-        render: h => h(Logo)
+        render: h => h(
+            Logo, {
+                props: {
+                    message: message
+                },
+            })
     });
 }
 
 renderVueComponentToString(createApp(), (err, res) => {
-    print(message);
+    print(res);
 });
